@@ -3,6 +3,9 @@ name: Run TFLint check
 on:
   - push
 
+permissions:
+  contents: write
+
 jobs:
   tflint-check:
     name: Run TFLint check

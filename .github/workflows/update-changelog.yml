@@ -4,6 +4,9 @@ on:
   release:
     types: [released]
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
 
       - name: Update Changelog
         uses: stefanzweifel/changelog-updater-action@v1
@@ -26,6 +29,6 @@ jobs:
       - name: Commit updated CHANGELOG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: master
+          branch: main
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md

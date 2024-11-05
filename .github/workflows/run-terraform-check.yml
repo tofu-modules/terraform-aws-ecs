@@ -3,6 +3,9 @@ name: Run Terraform check
 on:
   - push
 
+permissions:
+  contents: write
+
 jobs:
   terraform-check:
     name: Run Terraform check

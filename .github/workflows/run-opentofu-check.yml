@@ -3,6 +3,9 @@ name: Run OpenTofu check
 on:
   - push
 
+permissions:
+  contents: write
+
 jobs:
   opentofu-check:
     name: Run OpenTofu check
