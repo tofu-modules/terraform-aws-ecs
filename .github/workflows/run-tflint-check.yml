@@ -24,20 +24,17 @@ jobs:
         run: |
           tflint --version
 
-      - name: Run init
+      - name: Run check modules
         run: |
           cd modules
           for f in * ; do
             if [ -d "$f" ] ; then
               cd $f
               tflint --init
+              tflint --format=compact --no-color
               cd ..
             fi
           done
-
-      - name: Run check
-        run: |
-          tflint --recursive --format=compact --no-color
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5

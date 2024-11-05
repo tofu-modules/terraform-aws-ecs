@@ -70,6 +70,9 @@ terraform: ## Run Terraform check
 docs: ## Generate README.md
 	terraform-docs markdown . \
 		--recursive \
-		--sort-by required \
-		--output-file README.md \
-		--output-mode insert
+		--recursive-include-main=false \
+		--recursive-path=modules \
+		--sort-by=required \
+		--output-file=README.md \
+		--output-mode=insert \
+		--lockfile=false

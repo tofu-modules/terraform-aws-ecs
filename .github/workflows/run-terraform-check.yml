@@ -18,20 +18,18 @@ jobs:
         run: |
           terraform -version
 
-      - name: Run init
+      - name: Run check modules
         run: |
           cd modules
           for f in * ; do
             if [ -d "$f" ] ; then
               cd $f
-              terraform --init
+              terraform init -upgrade -no-color
+              terraform fmt -check -no-color
+              terraform validate -no-color
               cd ..
             fi
           done
-
-      - name: Run check format
-        run: |
-          terraform fmt -recursive -check -no-color
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5

@@ -1,30 +1,9 @@
 # AWS ECS module
 
-<!-- BEGIN_TF_DOCS -->
-## Requirements
+## Submodules
 
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
+- [ECS execution role](modules/execution-role/README.md)
+- [ECS task role]((modules/task-role/README.md))
 
 ## Development
 

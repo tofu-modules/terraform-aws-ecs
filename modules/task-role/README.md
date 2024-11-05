@@ -1,6 +1,7 @@
 # ECS Task Role submodule
 
-This submodule help create an IAM assumable role for ECS Task
+This submodule help create an IAM assumable role for ECS Task   
+See https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html
 
 ## Usage
 
@@ -41,7 +42,7 @@ module "task_role" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.74.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.20 |
 
 ## Modules
 
