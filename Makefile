@@ -52,6 +52,18 @@ init: ## Init project
 	done
 
 
+clean: ## Clean workspace
+	cd modules; \
+	for f in * ; do \
+		if [ -d "$$f" ] ; then \
+			cd $$f ; \
+			rm -rf .terraform ; \
+			rm -rf .terraform.lock.hcl ; \
+			cd .. ; \
+		fi ; \
+	done
+
+
 build: tofu tflint docs ## Build module
 
 

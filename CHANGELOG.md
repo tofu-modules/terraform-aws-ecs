@@ -8,3 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 <!-- New Release notes will be placed here automatically -->
+
+## v0.1.0 - 2024-11-05
+
+### The first release
+
+**Full Changelog**: https://github.com/tofu-modules/terraform-aws-ecs/commits/v0.1.0
